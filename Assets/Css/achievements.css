@@ -1,0 +1,134 @@
+/* General */
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+body,
+html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font: normal 16px sans-serif;
+  text-align: center;
+}
+
+html {
+  animation: 1s fadein 1s forwards;
+  opacity: 0;
+}
+
+hr {
+  width: 250px;
+  height: 3px;
+  background-color: #3f51b5;
+  border: 0;
+  margin-bottom: 50px;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff
+    url(https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif)
+    no-repeat center;
+}
+
+section:not(.hero):nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font: bold 52px "Open Sans", sans-serif;
+  opacity: 0.7;
+}
+
+/* Back to Top Button */
+
+#button {
+  display: inline-block;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 30px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/* Main body content */
+
+.main {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.grid .para {
+  width: 60%;
+  float: left;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+.grid img.image {
+  width: 40%;
+  float: right;
+  padding: 35px;
+}
+.container h1 {
+  padding-top: 30px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .grid .para {
+    width: 100%;
+  }
+
+  .grid img.image {
+    width: 100%;
+  }
+}
